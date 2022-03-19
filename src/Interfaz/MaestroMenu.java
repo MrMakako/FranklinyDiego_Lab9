@@ -4,16 +4,35 @@
  */
 package Interfaz;
 
+import conexion.DataBase;
+
 /**
  *
  * @author xavie
  */
-public class Crear1 extends javax.swing.JFrame {
+public class MaestroMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form Crear1
      */
-    public Crear1() {
+    
+    
+    DataBase bd= new DataBase();
+    
+    
+    
+    public MaestroMenu(int RHH){
+        
+        
+        initComponents();
+        
+        
+    
+    
+    
+    }
+    
+    public MaestroMenu() {
         initComponents();
     }
 
@@ -265,6 +284,11 @@ public class Crear1 extends javax.swing.JFrame {
         });
 
         jButton2.setText("Crear nueva Clase");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Crear Categoria");
 
@@ -324,6 +348,10 @@ public class Crear1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -341,20 +369,21 @@ public class Crear1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Crear1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MaestroMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Crear1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MaestroMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Crear1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MaestroMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Crear1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MaestroMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Crear1().setVisible(true);
+                new MaestroMenu().setVisible(true);
             }
         });
     }
